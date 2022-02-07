@@ -1,25 +1,12 @@
-n = int(input("rows:"))
+n=int(input("rows:"))
+for i in range(0, n):
+    print("*"*i, end="")
+    print(" "*((n-i)*2-1), end="")
+    print("*"*i)
 
+print("*"*((2*n)-1))
 
-
-for i in range(1, n):
-    print(end="\t")
-    for j in range(1, i + 1):
-        print("*", end="")
-    for j in range(1, (2 * (n - i)) + 1):
-        print( end=" ")
-    print(end="\b")
-    for j in range(i, 0, -1):
-        print("*", end="")
-    print(end="\n")
-
-for i in range(n, 0, -1):
-    print(end="\t")
-    for j in range(1, i + 1):
-        print("*", end="")
-    for j in range(1, (2 * (n - i)) + 1):
-        print(end=" ")
-    print(end="\b")
-    for digits in range(i, 0, -1):
-        print("*", end="")
-    print(end="\n")
+for i in range(n-1,0,-1):
+    print("*"*(i), end="")
+    print(" "*((n-i)*2-1), end="")
+    print("*"*i)
